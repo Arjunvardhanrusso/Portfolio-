@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun V. R. Akkena | System Architect</title>
+    <!-- Use Outfit and JetBrains Mono for a highly technical vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+    <!-- Boot Sequence Overlay -->
+    <div id="boot-sequence" class="boot-screen">
+        <div class="boot-console">
+            <p id="boot-text"></p>
+            <span class="cursor"></span>
+        </div>
+    </div>
+
+    <!-- Neural Network Canvas -->
+    <canvas id="neural-net"></canvas>
+
+    <!-- Grid overlay background -->
+    <div class="grid-overlay"></div>
+    <div class="glow-orb top-left"></div>
+    <div class="glow-orb bottom-right"></div>
+
+    <nav class="sys-nav glass-panel">
+        <div class="brand">sys.ARJUN_AKKENA</div>
+        <ul class="nav-links">
+            <li><a href="#core">01. Core</a></li>
+            <li><a href="#deployments">02. Deployments</a></li>
+            <li><a href="#terminal">03. Procure</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <header id="core" class="hero section-spacing">
+            <div class="hero-content fade-in">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span class="badge-text">STATUS: AVAILABLE FOR DEPLOYMENT</span>
+                </div>
+                <h1 class="hero-title">Engineering the<br><span class="gradient-text glitch-effect" data-text="Architecture.">Architecture.</span></h1>
+                <p class="hero-desc">
+                    Backend Software Engineer specializing in high-throughput <span class="highlight">Java Spring Boot</span> microservices, predictive <span class="highlight">Machine Learning</span> models, and distributed <span class="highlight">AWS architectures</span>. I build systems that don't fail.
+                </p>
+                <div class="action-buttons">
+                    <a href="#terminal" class="btn-primary">Initialize Access</a>
+                    <a href="https://linkedin.com/in/arjun-akkena" class="btn-secondary" target="_blank">Trace LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Arsenal (Skills) Section -->
+        <section id="arsenal" class="arsenal section-spacing fade-in">
+            <h2 class="section-title">01.1 Тех Stack / Arsenal</h2>
+            <div class="stack-grid">
+                <div class="stack-card tilt-card glass-panel">
+                    <div class="glare"></div>
+                    <div class="stack-icon">⚙️</div>
+                    <h3>Backend Core</h3>
+                    <p>Java 17+, Spring Boot, Hibernate, RESTful API Design, JWT Authentication</p>
+                </div>
+                <div class="stack-card tilt-card glass-panel">
+                    <div class="glare"></div>
+                    <div class="stack-icon">💾</div>
+                    <h3>Data Persistence</h3>
+                    <p>PostgreSQL, MySQL, MongoDB, Redis Caching, ACID Compliance</p>
+                </div>
+                <div class="stack-card tilt-card glass-panel">
+                    <div class="glare"></div>
+                    <div class="stack-icon">🧠</div>
+                    <h3>Machine Intelligence</h3>
+                    <p>Python, XGBoost, scikit-learn, Imbalanced Data Pipelines, SMOTE</p>
+                </div>
+                <div class="stack-card tilt-card glass-panel">
+                    <div class="glare"></div>
+                    <div class="stack-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS EC2, Docker Containerization, CI/CD, Git Infrastructure</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="deployments" class="deployments section-spacing fade-in">
+            <h2 class="section-title">02. Active Deployments</h2>
+            
+            <div class="deployment-timeline">
+                <div class="deployment-node tilt-card glass-panel border-gradient">
+                    <div class="glare"></div>
+                    <div class="d-header">
+                        <h3>ERP Integration Engine</h3>
+                        <span class="d-tech">Java / Spring Boot / JWT / MySQL</span>
+                    </div>
+                    <p class="d-desc">Architected scalable REST APIs integrating MySQL and MongoDB schemas for inventory and transactions, enforcing strict role-based access protocols for a comprehensive Bookstore system.</p>
+                </div>
+                
+                <div class="deployment-node tilt-card glass-panel border-gradient">
+                    <div class="glare"></div>
+                    <div class="d-header">
+                        <h3>Financial Fraud Detection Pipeline</h3>
+                        <span class="d-tech">Python / XGBoost / SMOTE</span>
+                    </div>
+                    <p class="d-desc">Designed algorithms mapping highly imbalanced datasets. Applied advanced SMOTE algorithms and dynamic class weighting paradigms to drastically improve minority class recall metrics.</p>
+                </div>
+
+                <div class="deployment-node tilt-card glass-panel border-gradient">
+                    <div class="glare"></div>
+                    <div class="d-header">
+                        <h3>Quantum Teleportation Subroutine</h3>
+                        <span class="d-tech">IBM Qiskit / Python</span>
+                    </div>
+                    <p class="d-desc">Implemented the foundational quantum teleportation protocol from scratch, validating qubit transmission fidelity across simulated distributed nodes using Bloch sphere analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Command Terminal (Backend Integration) -->
+        <section id="terminal" class="terminal section-spacing fade-in">
+            <div class="terminal-window glass-panel">
+                <div class="terminal-header">
+                    <div class="window-controls">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="window-title">bash -- arjun_akkena_procurement_service</div>
+                </div>
+                <div class="terminal-body" id="app">
+                    <p class="sys-msg">> Connection established to arjun-akkena-server:8080</p>
+                    <p class="sys-msg">> Awaiting deployment order directives...</p>
+
+                    <form id="orderForm" class="cyber-form">
+                        <div class="form-group">
+                            <label for="customerId">Target Entity (Your Email/Name):</label>
+                            <input type="text" id="customerId" required placeholder="e.g. recruiter@techcorp.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productId">Requested Module (Architecture Needed):</label>
+                            <select id="productId" required>
+                                <option value="ENTERPRISE_BACKEND">Full-Stack Enterprise Architecture</option>
+                                <option value="ML_INTEGRATION">Machine Learning Pipeline Integration</option>
+                                <option value="CLOUD_MIGRATION">Cloud Deployment Strategy</option>
+                                <option value="INTERVIEW_REQUEST">Technical Interview / Meeting</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Provision Duration (Months):</label>
+                            <input type="number" id="quantity" required min="1" max="100" placeholder="e.g. 12">
+                        </div>
+
+                        <button type="submit" class="terminal-btn" id="submitBtn">
+                            execute --deploy
+                        </button>
+                    </form>
+
+                    <div id="terminalOutput" class="terminal-output hidden">
+                        <span class="cursor"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cyber-footer">
+        <p>sys.ARJUN_AKKENA // Secure connection routed over localhost:8080 // <span class="copyright">© 2026. All operations logged.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

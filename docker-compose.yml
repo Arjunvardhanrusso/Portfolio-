@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # The Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: hyperion_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: hyperion_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # The Cache
+  redis:
+    image: redis:7-alpine
+    container_name: hyperion_redis
+    ports:
+      - "6379:6379"
+
+  # The Java Application
+  hyperion-app:
+    build: .
+    container_name: hyperion_backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      # Inject Docker networking so Spring connects to containers instead of "localhost"
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/hyperion_db
+      - SPRING_DATA_REDIS_HOST=redis
+
+volumes:
+  postgres_data:
