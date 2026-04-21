@@ -28,6 +28,9 @@ public class OrderService {
     public boolean processOrderSync(OrderRequestDTO request) {
         String redisKey = INVENTORY_KEY_PREFIX + request.getProductId();
         
+        // Initialize inventory to 999 if it doesn't exist yet!
+        redisTemplate.opsForValue().setIfAbsent(redisKey, "999");
+        
         // Atomically decrement the inventory in Redis
         Long remaining = redisTemplate.opsForValue().decrement(redisKey, request.getQuantity());
 

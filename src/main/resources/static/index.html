@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun V. R. Akkena | System Architect</title>
+    <title>Arjun Vardhan Russo Akkena | System Architect</title>
     <!-- Use Outfit and JetBrains Mono for a highly technical vibe -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +27,11 @@
     <div class="glow-orb bottom-right"></div>
 
     <nav class="sys-nav glass-panel">
-        <div class="brand">sys.ARJUN_AKKENA</div>
+        <div class="brand glow-text">Arjun Vardhan Russo Akkena</div>
         <ul class="nav-links">
-            <li><a href="#core">01. Core</a></li>
-            <li><a href="#deployments">02. Deployments</a></li>
-            <li><a href="#terminal">03. Procure</a></li>
+            <li><a href="#core">Core</a></li>
+            <li><a href="#deployments">Deployments</a></li>
+            <li><a href="#terminal">Procure</a></li>
         </ul>
     </nav>
 
@@ -44,10 +43,8 @@
                     <span class="pulse-dot"></span>
                     <span class="badge-text">STATUS: AVAILABLE FOR DEPLOYMENT</span>
                 </div>
-                <h1 class="hero-title">Engineering the<br><span class="gradient-text glitch-effect" data-text="Architecture.">Architecture.</span></h1>
-                <p class="hero-desc">
-                    Backend Software Engineer specializing in high-throughput <span class="highlight">Java Spring Boot</span> microservices, predictive <span class="highlight">Machine Learning</span> models, and distributed <span class="highlight">AWS architectures</span>. I build systems that don't fail.
-                </p>
+                <h1 class="glitch-effect glow-text" data-text="Engineering the Architecture.">Engineering the <br>Architecture.</h1>
+                <p class="hero-desc">Backend Software Engineer specializing in high-throughput <span class="highlight">Java Spring Boot</span> microservices, predictive <span class="highlight">Machine Learning</span> models, and distributed <span class="highlight">AWS architectures</span>. I build systems that don't fail.</p>
                 <div class="action-buttons">
                     <a href="#terminal" class="btn-primary">Initialize Access</a>
                     <a href="https://linkedin.com/in/arjun-akkena" class="btn-secondary" target="_blank">Trace LinkedIn</a>
@@ -57,7 +54,7 @@
 
         <!-- Arsenal (Skills) Section -->
         <section id="arsenal" class="arsenal section-spacing fade-in">
-            <h2 class="section-title">01.1 Тех Stack / Arsenal</h2>
+            <h2 class="section-title">Arsenal / Tech Stack</h2>
             <div class="stack-grid">
                 <div class="stack-card tilt-card glass-panel">
                     <div class="glare"></div>
@@ -88,7 +85,7 @@
 
         <!-- Projects Section -->
         <section id="deployments" class="deployments section-spacing fade-in">
-            <h2 class="section-title">02. Active Deployments</h2>
+            <h2 class="section-title">Active Deployments</h2>
             
             <div class="deployment-timeline">
                 <div class="deployment-node tilt-card glass-panel border-gradient">
@@ -127,7 +124,7 @@
                     <div class="window-controls">
                         <span></span><span></span><span></span>
                     </div>
-                    <div class="window-title">bash -- arjun_akkena_procurement_service</div>
+                    <div class="window-title">Deployment Terminal</div>
                 </div>
                 <div class="terminal-body" id="app">
                     <p class="sys-msg">> Connection established to arjun-akkena-server:8080</p>
@@ -136,22 +133,23 @@
                     <form id="orderForm" class="cyber-form">
                         <div class="form-group">
                             <label for="customerId">Target Entity (Your Email/Name):</label>
-                            <input type="text" id="customerId" required placeholder="e.g. recruiter@techcorp.com">
+                            <input type="text" id="customerId" required placeholder="e.g. your.email@example.com">
                         </div>
 
                         <div class="form-group">
                             <label for="productId">Requested Module (Architecture Needed):</label>
-                            <select id="productId" required>
-                                <option value="ENTERPRISE_BACKEND">Full-Stack Enterprise Architecture</option>
-                                <option value="ML_INTEGRATION">Machine Learning Pipeline Integration</option>
-                                <option value="CLOUD_MIGRATION">Cloud Deployment Strategy</option>
-                                <option value="INTERVIEW_REQUEST">Technical Interview / Meeting</option>
+                            <select id="productId" class="colorful-select" required>
+                                <option value="" disabled selected>-- Select Module --</option>
+                                <option value="ENTERPRISE_BACKEND" class="opt-purple">Full-Stack Enterprise Architecture</option>
+                                <option value="ML_INTEGRATION" class="opt-cyan">Machine Learning Pipeline Integration</option>
+                                <option value="CLOUD_MIGRATION" class="opt-yellow">Cloud Deployment Strategy</option>
+                                <option value="INTERVIEW_REQUEST" class="opt-green">Technical Interview / Meeting</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="quantity">Provision Duration (Months):</label>
-                            <input type="number" id="quantity" required min="1" max="100" placeholder="e.g. 12">
+                            <label for="quantity">Provision Duration (Days / Months):</label>
+                            <input type="number" id="quantity" required min="1" max="1000" placeholder="e.g. 14">
                         </div>
 
                         <button type="submit" class="terminal-btn" id="submitBtn">

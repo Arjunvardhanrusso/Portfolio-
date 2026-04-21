@@ -3,7 +3,7 @@ const bootText = document.getElementById('boot-text');
 const bootScreen = document.getElementById('boot-sequence');
 const bootLines = [
     "Initializing Neural Net...",
-    "Mounting sys.ARJUN_AKKENA...",
+    "Mounting Arjun Vardhan Russo Akkena...",
     "Loading XGBoost Core Weights...",
     "Establishing Quantum Entanglement...",
     "Securing Pipeline to localhost:8080...",
@@ -189,11 +189,11 @@ orderForm.addEventListener('submit', async (e) => {
     };
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'executing [███---]';
+    submitBtn.textContent = 'executing...';
     terminalOutput.classList.remove('hidden');
     terminalOutput.innerHTML = '';
     
-    await typeWriter(terminalOutput, "> transmitting payload to localhost:8080...", 10);
+    await typeWriter(terminalOutput, "> transmitting payload to server...", 10);
 
     try {
         const response = await fetch('/api/orders', {
@@ -206,16 +206,16 @@ orderForm.addEventListener('submit', async (e) => {
 
         if (response.ok) {
             await typeWriter(terminalOutput, `> HTTP 200 OK`, 10);
-            await typeWriter(terminalOutput, `> [SUCCESS]: ${dataText}`, 30);
+            await typeWriter(terminalOutput, `> Success: ${dataText}`, 30);
             await typeWriter(terminalOutput, `> Your deployment sequence has been successfully initialized.`, 15);
             orderForm.reset();
         } else {
             await typeWriter(terminalOutput, `> HTTP ${response.status} CONFLICT`, 20);
-            await typeWriter(terminalOutput, `> <span class="error-msg">[ERROR]: ${dataText}</span>`, 30);
+            await typeWriter(terminalOutput, `> <span class="error-msg">Error: ${dataText}</span>`, 30);
         }
 
     } catch (error) {
-        await typeWriter(terminalOutput, `> <span class="error-msg">[CRITICAL]: Backend unreachable. ${error.message}</span>`, 10);
+        await typeWriter(terminalOutput, `> <span class="error-msg">Critical Error: Backend unreachable. ${error.message}</span>`, 10);
     } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = 'execute --deploy';
